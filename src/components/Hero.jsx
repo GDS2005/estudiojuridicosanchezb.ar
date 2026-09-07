@@ -42,7 +42,7 @@ export default function Hero() {
           <img
             src="./img/hero-balanza.png"
             alt="Balanza de la justicia"
-            className="h-full w-full object-cover"
+            className="h-full w-full object-cover object-top"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-ivory via-transparent to-transparent lg:bg-gradient-to-r lg:from-ivory lg:via-transparent" />
         </div>
