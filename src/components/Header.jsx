@@ -15,10 +15,10 @@ export default function Header() {
           />
           <span className="flex flex-col gap-0.5 border-l border-gold/35 pl-3 md:pl-4">
             <span className="font-serif text-[15px] tracking-[2px] text-ink md:text-lg">
-              ESTUDIO JURÍDICO <strong className="font-semibold text-gold">SEC</strong>
+              ESTUDIO JURÍDICO <strong className="font-semibold text-gold">SB&A</strong>
             </span>
             <span className="text-[9px] uppercase tracking-[2.2px] text-stone md:text-[10px]">
-              Sánchez · Emili · Cerruti — Mendoza
+              Sánchez Bicocca & Asociados — Mendoza
             </span>
           </span>
         </a>
