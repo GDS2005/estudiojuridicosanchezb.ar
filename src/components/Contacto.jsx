@@ -25,94 +25,59 @@ export default function Contacto() {
 
   return (
     <section id="contacto" className="bg-ivory px-5 py-14 md:px-10 md:py-20">
-      <div className="mx-auto grid max-w-[1280px] gap-10 lg:grid-cols-2 lg:gap-16">
-        <div className="flex flex-col gap-4">
-          <p className="text-[11px] uppercase tracking-[5px] text-gold md:text-xs">Contacto</p>
-          <h2 className="m-0 font-serif text-[30px] font-medium text-ink md:text-[40px]">
-            Contanos tu caso
-          </h2>
-          <p className="m-0 max-w-[480px] text-[15px] font-light leading-[1.7] text-muted">
-            Respondemos consultas de particulares, empresas y organizaciones. La primera evaluación
-            de tu caso es sin cargo.
-          </p>
-          <ul className="m-0 mt-2 flex list-none flex-col gap-3.5 p-0 text-[15px]">
+      <div className="mx-auto flex max-w-[1280px] flex-col gap-10">
+        <div className="grid gap-8 sm:grid-cols-2 sm:gap-10">
+          <div className="flex flex-col gap-4">
+            <p className="text-[11px] uppercase tracking-[5px] text-gold md:text-xs">Contacto</p>
+            <h2 className="m-0 font-serif text-[30px] font-medium text-ink md:text-[40px]">
+              Contanos tu caso
+            </h2>
+            <p className="m-0 max-w-[480px] text-[15px] font-light leading-[1.7] text-muted">
+              Respondemos consultas de particulares, empresas y organizaciones. La primera evaluación
+              de tu caso es sin cargo.
+            </p>
+          </div>
+
+          <ul className="m-0 flex list-none flex-col justify-center gap-4 p-0 text-[15px] sm:border-l sm:border-gold/20 sm:pl-8">
             <li className="flex items-center gap-3">
-              <span className="text-gold">☎</span>
+              <span className="flex h-6 w-6 flex-shrink-0 items-center justify-center text-lg leading-none text-gold">
+                ☎
+              </span>
               <a href={`tel:+${contacto.whatsapp}`} className="text-ink hover:text-gold">
                 {contacto.telefono}
               </a>
             </li>
             <li className="flex items-center gap-3">
-              <span className="text-gold">🌐</span>
+              <span className="flex h-6 w-6 flex-shrink-0 items-center justify-center text-lg leading-none text-gold">
+                🌐
+              </span>
               <a href={contacto.sitioUrl} className="text-ink hover:text-gold">
                 {contacto.sitio}
               </a>
             </li>
             <li className="flex items-center gap-3">
-              <span className="text-gold">◎</span>
+              <span className="flex h-6 w-6 flex-shrink-0 items-center justify-center text-lg leading-none text-gold">
+                ◎
+              </span>
               <a href={contacto.instagramUrl} className="text-ink hover:text-gold">
                 {contacto.instagram}
               </a>
             </li>
             <li className="flex items-center gap-3">
-              <span className="text-gold">⌖</span>
+              <span className="flex h-6 w-6 flex-shrink-0 items-center justify-center text-lg leading-none text-gold">
+                ⌖
+              </span>
               <span>{contacto.ciudad}</span>
             </li>
           </ul>
         </div>
 
-        <form
-          onSubmit={enviar}
-          className="flex flex-col gap-4 bg-white p-6 shadow-[0_1px_4px_rgba(28,26,23,.08)] md:p-9"
-        >
-          <input
-            className={field}
-            placeholder="Nombre y apellido"
-            value={form.nombre}
-            onChange={set('nombre')}
-            required
-          />
-          <div className="grid gap-4 sm:grid-cols-2">
-            <input
-              className={field}
-              type="email"
-              placeholder="Email"
-              value={form.email}
-              onChange={set('email')}
-            />
-            <input
-              className={field}
-              type="tel"
-              placeholder="Teléfono"
-              value={form.tel}
-              onChange={set('tel')}
-            />
-          </div>
-          <select
-            className={`${field} ${form.motivo ? 'text-ink' : 'text-muted'}`}
-            value={form.motivo}
-            onChange={set('motivo')}
-          >
-            <option value="">Motivo de consulta…</option>
-            {motivos.map((m) => (
-              <option key={m} value={m}>
-                {m}
-              </option>
-            ))}
-          </select>
-          <textarea
-            className={`${field} min-h-[120px] resize-y`}
-            placeholder="Contanos brevemente tu caso…"
-            value={form.mensaje}
-            onChange={set('mensaje')}
-          />
-          <button
-            type="submit"
-            className="cursor-pointer border-none bg-ink px-4 py-4 font-sans text-sm font-semibold uppercase tracking-[3px] text-ivory hover:bg-gold"
-          >
-            Enviar consulta
-          </button>
-        </form>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3349.7711821985295!2d-68.85272958849134!3d-32.904217573500716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967e090cd16e14fb%3A0xb48cc13423e71119!2sSantiago%20de%20Liniers%20580%2C%20M5501%20Godoy%20Cruz%2C%20Mendoza!5e0!3m2!1ses!2sar!4v1789055222742!5m2!1ses!2sar"
+          className="h-[380px] w-full rounded-md border-0 md:h-[420px]"
+          allowFullScreen
+          loading="lazy"
+        ></iframe>
       </div>
     </section>
   )
